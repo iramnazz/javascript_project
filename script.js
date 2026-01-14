@@ -533,7 +533,7 @@ function calSquare (num,callback){
 function printSquare(result){
     console.log("the square is:",result);
 }
-calSquare(5,printSquare);
+calSquare(10,printSquare);
 
 
 

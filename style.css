@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 html,body{
     height:100%;
     width:100%;
@@ -24,4 +24,29 @@ html,body{
     padding:10px 0px;
     border: 2px solid black;
     border-radius:5px;
+} */
+ h1{
+    background-color: brown;
+    padding:2px;
+    margin:3px;
+}
+body {
+    background-color: blueviolet;
+}
+button{
+    background-color: brown;
+    border: 2px solid black;
+    border-radius: 3px;
+    
+}
+.body{
+background-color: yellow;
+}
+.body {
+    background-color: violet;
+    font-family: cursive;
+    
+}
+.heading{
+    background-color: pink;
 }

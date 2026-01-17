@@ -25,10 +25,11 @@ html,body{
     border: 2px solid black;
     border-radius:5px;
 } */
- h1{
+ /* h1{
     background-color: brown;
     padding:2px;
     margin:3px;
+    visibility: hidden;
 }
 body {
     background-color: blueviolet;
@@ -49,4 +50,12 @@ background-color: yellow;
 }
 .heading{
     background-color: pink;
-}
+} */
+ .box{
+width: 100px;
+height: 100px;
+border:2px solid black;
+text-align: center;
+margin:5px;
+background-color: aquamarine;
+ }

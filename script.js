@@ -553,14 +553,43 @@
 //         }
 //     })
 // })
-console.log("DOM")
- document.body.childNodes[3].innerText= "Hellow World";
- let heading=document.getElementById("heading")
- console.dir(heading);
- let headings= document.getElementsByClassName("heading");
- console.dir(headings);
-let parahs= document.getElementsByTagName("p")
-console.dir(parahs);
+// console.log("DOM")
+//  document.body.childNodes[3].innerText= "Hellow World";
+//  let heading=document.getElementById("heading")
+//  console.dir(heading);
+//  let headings= document.getElementsByClassName("heading");
+//  console.dir(headings);
+// let parahs= document.getElementsByTagName("p")
+// console.dir(parahs);
+// let firstElement= document.querySelector("p");
+// console.dir(firstElement);
+// let allElement= document.querySelectorAll("p");
+// console.dir(allElement);
+// let el= document.querySelectorAll(".heading");
+// console.dir(el);
+// let el= document.querySelector("p");
+// console.dir(el);
+let div= document.querySelector("div");
+console.dir(div);
+let heading= document.querySelector(".heading");
+console.dir(heading);
+let h2 = document.querySelector("h2");
+console.dir(h2.innerText);
+h2.innerText= h2.innerText+"hello world";
+let divs= document.querySelectorAll(".box");
+let idx=1;
+for (div of divs){
+div.innerText=`new value ${idx}`;
+idx++;
+}
+
+divs[0].innerText="new unique value1";
+divs[1].innerText="mew unique value2";
+divs[2].innerText="new unique value3";
+
+
+
+
 
 
 

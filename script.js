@@ -569,24 +569,61 @@
 // console.dir(el);
 // let el= document.querySelector("p");
 // console.dir(el);
-let div= document.querySelector("div");
-console.dir(div);
-let heading= document.querySelector(".heading");
-console.dir(heading);
-let h2 = document.querySelector("h2");
-console.dir(h2.innerText);
-h2.innerText= h2.innerText+"hello world";
-let divs= document.querySelectorAll(".box");
-let idx=1;
-for (div of divs){
-div.innerText=`new value ${idx}`;
-idx++;
-}
+// let div= document.querySelector("div");
+// console.dir(div);
+// let heading= document.querySelector(".heading");
+// console.dir(heading);
+// let h2 = document.querySelector("h2");
+// console.dir(h2.innerText);
+// h2.innerText= h2.innerText+"hello world";
+// let divs= document.querySelectorAll(".box");
+// let idx=1;
+// for (div of divs){
+// div.innerText=`new value ${idx}`;
+// idx++;
+// }
 
-divs[0].innerText="new unique value1";
-divs[1].innerText="mew unique value2";
-divs[2].innerText="new unique value3";
-console.log("helllo world");
+// divs[0].innerText="new unique value1";
+// divs[1].innerText="mew unique value2";
+// divs[2].innerText="new unique value3";
+// console.log("helllo world");
+let div= document.querySelector("div");
+console.log(div);
+let id= div.getAttribute("id");
+console.log(id);
+let para= document.querySelector("p");
+console.log(para.setAttribute("class","newClass"));
+let div=document.querySelector("div");
+console.log(div)
+div.style.backgroundColor= "red"
+div.style.fontSize="20px"
+div.innerText="Hello!!"
+let newBtn= document.createElement("button");
+newBtn.innerText="click me";
+console.log(newBtn)
+let para=document.querySelector("p")
+para.after (newBtn)
+let heading= document.createElement("h1");
+heading.innerHTML= "<i> Heading 1 <i/>";
+document.querySelector("h1")
+document.querySelector("body").prepend(heading)
+let para=document.querySelector("h1");
+heading.remove();
+let div=document.querySelector("div");
+div.remove();
+let body= document.querySelector("body")
+body.remove();
+let newBtn=document.createElement("button");
+newBtn.innerText="Cick Me";
+newBtn.style.backgroundColor="red";
+newBtn.style.color="White";
+console.dir(newBtn)
+
+document.querySelector("body").prepend(newBtn);
+let para= document.querySelector("p");
+para.getAttribute("class")
+
+
 
 
 

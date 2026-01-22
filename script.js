@@ -586,7 +586,7 @@ idx++;
 divs[0].innerText="new unique value1";
 divs[1].innerText="mew unique value2";
 divs[2].innerText="new unique value3";
-
+console.log("helllo world");
 
 
 

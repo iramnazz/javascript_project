@@ -587,47 +587,67 @@
 // divs[1].innerText="mew unique value2";
 // divs[2].innerText="new unique value3";
 // console.log("helllo world");
-let div= document.querySelector("div");
-console.log(div);
-let id= div.getAttribute("id");
-console.log(id);
-let para= document.querySelector("p");
-console.log(para.setAttribute("class","newClass"));
-let div=document.querySelector("div");
-console.log(div)
-div.style.backgroundColor= "red"
-div.style.fontSize="20px"
-div.innerText="Hello!!"
-let newBtn= document.createElement("button");
-newBtn.innerText="click me";
-console.log(newBtn)
-let para=document.querySelector("p")
-para.after (newBtn)
-let heading= document.createElement("h1");
-heading.innerHTML= "<i> Heading 1 <i/>";
-document.querySelector("h1")
-document.querySelector("body").prepend(heading)
-let para=document.querySelector("h1");
-heading.remove();
-let div=document.querySelector("div");
-div.remove();
-let body= document.querySelector("body")
-body.remove();
-let newBtn=document.createElement("button");
-newBtn.innerText="Cick Me";
-newBtn.style.backgroundColor="red";
-newBtn.style.color="White";
-console.dir(newBtn)
+// let div= document.querySelector("div");
+// console.log(div);
+// let id= div.getAttribute("id");
+// console.log(id);
+// let para= document.querySelector("p");
+// console.log(para.setAttribute("class","newClass"));
+// let div=document.querySelector("div");
+// console.log(div)
+// div.style.backgroundColor= "red"
+// div.style.fontSize="20px"
+// div.innerText="Hello!!"
+// let newBtn= document.createElement("button");
+// newBtn.innerText="click me";
+// console.log(newBtn)
+// let para=document.querySelector("p")
+// para.after (newBtn)
+// let heading= document.createElement("h1");
+// heading.innerHTML= "<i> Heading 1 <i/>";
+// document.querySelector("h1")
+// document.querySelector("body").prepend(heading)
+// let para=document.querySelector("h1");
+// heading.remove();
+// let div=document.querySelector("div");
+// div.remove();
+// let body= document.querySelector("body")
+// body.remove();
+// let newBtn=document.createElement("button");
+// newBtn.innerText="Cick Me";
+// newBtn.style.backgroundColor="red";
+// newBtn.style.color="White";
+// console.dir(newBtn)
 
-document.querySelector("body").prepend(newBtn);
-let para= document.querySelector("p");
-para.getAttribute("class")
-
-
-
-
-
-
-
-
-
+// document.querySelector("body").prepend(newBtn);
+// let para= document.querySelector("p");
+// para.getAttribute("class")
+// let btn1= document.querySelector("#btn1");
+// btn1.onclick=(e)=>{
+//     console.log(e)
+//     console.log(e.type);
+//     console.log(e.target); 
+// }
+let btn1= document.querySelector("#btn1")
+btn1.addEventListener("click", (evt)=>{
+console.log("button1 was clicked-Handler1");
+console.log(evt);
+console.log(evt.type);
+console.log(evt.target);
+});
+btn1.addEventListener("click", ()=>{
+console.log("button1 was clicked-Handler2");
+});
+let currentMode= "light";
+let modeBtn= document.querySelector("#mode");
+modeBtn.addEventListener("click", ()=>{
+if(currentMode==="light"){
+    currentMode="dark";
+    document.querySelector("body").style.backgroundColor="black";}
+    else{
+        currentMode="light";
+        document.querySelector("body").style.backgroundColor="white";}
+    
+    console.log(currentMode);
+}
+);

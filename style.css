@@ -59,9 +59,11 @@ text-align: center;
 margin:5px;
 background-color: yellowgreen;
  } */
-  .content{
-    background-color:yellow
-  }
-  .newClass{
-    background-color: blueviolet
+  /* / */
+  div{
+    height:100px;
+    width:100px;
+    background-color: dodgerblue;
+    color:white;
+    border: 1px solid black;
   }

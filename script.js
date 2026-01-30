@@ -664,6 +664,13 @@ const genCompChoice=()=>{
         console.log("game was draw");
     
 };
+const showWinner= (userWin)=>{
+    if (userWin){
+        console.log("you win");
+    }else{
+        console.log("you loose");
+    }
+}
 const playGame=(userChoice)=>{
     console.log("userChoice=", userChoice);
 const compChoice=genCompChoice();
@@ -672,7 +679,19 @@ if (userChoice===compChoice){
     //draw game
     drawGame();
 }
-}
+else{
+    let userWin=true;
+    if(userChoice==="rock"){
+        compChoice==="paper"?false:true;}
+        else if (userChoice==="paper"){
+            compChoice==="scissors"?false:true;}
+            else{
+                compChoice==="rock"?false:true;
+            }
+            showWinner(userWin);
+        }
+};
+
 choices.forEach((choice) =>{
     choice.addEventListener("click",()=>{
         const userChoice=choice.getAttribute("id")

@@ -628,26 +628,58 @@
 //     console.log(e.type);
 //     console.log(e.target); 
 // }
-let btn1= document.querySelector("#btn1")
-btn1.addEventListener("click", (evt)=>{
-console.log("button1 was clicked-Handler1");
-console.log(evt);
-console.log(evt.type);
-console.log(evt.target);
-});
-btn1.addEventListener("click", ()=>{
-console.log("button1 was clicked-Handler2");
-});
-let currentMode= "light";
-let modeBtn= document.querySelector("#mode");
-modeBtn.addEventListener("click", ()=>{
-if(currentMode==="light"){
-    currentMode="dark";
-    document.querySelector("body").style.backgroundColor="black";}
-    else{
-        currentMode="light";
-        document.querySelector("body").style.backgroundColor="white";}
+// let btn1= document.querySelector("#btn1")
+// btn1.addEventListener("click", (evt)=>{
+// console.log("button1 was clicked-Handler1");
+// console.log(evt);
+// console.log(evt.type);
+// console.log(evt.target);
+// });
+// btn1.addEventListener("click", ()=>{
+// console.log("button1 was clicked-Handler2");
+// });
+// let currentMode= "light";
+// let modeBtn= document.querySelector("#mode");
+// modeBtn.addEventListener("click", ()=>{
+// if(currentMode==="light"){
+//     currentMode="dark";
+//     document.querySelector("body").style.backgroundColor="black";}
+//     else{
+//         currentMode="light";
+//         document.querySelector("body").style.backgroundColor="white";}
     
-    console.log(currentMode);
+//     console.log(currentMode);
+// }
+// );
+let userScore=0;
+let compScore=0;
+const choices= document.querySelectorAll(".choice");
+const genCompChoice=()=>{
+    const options= ["rock","paper","scissor"];
+    const randIdx=Math.floor(Math.random()*3);
+    return options[randIdx]
+};
+
+    const drawGame= ()=>{
+        console.log("game was draw");
+    
+};
+const playGame=(userChoice)=>{
+    console.log("userChoice=", userChoice);
+const compChoice=genCompChoice();
+console.log("comp choice=", compChoice)
+if (userChoice===compChoice){
+    //draw game
+    drawGame();
 }
-);
+}
+choices.forEach((choice) =>{
+    choice.addEventListener("click",()=>{
+        const userChoice=choice.getAttribute("id")
+         playGame(userChoice);
+
+    });
+});
+
+
+

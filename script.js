@@ -651,54 +651,42 @@
 //     console.log(currentMode);
 // }
 // );
-let userScore=0;
-let compScore=0;
-const choices= document.querySelectorAll(".choice");
-const genCompChoice=()=>{
-    const options= ["rock","paper","scissor"];
-    const randIdx=Math.floor(Math.random()*3);
-    return options[randIdx]
-};
+// /
+//   const employee = {
+//     calcTax(){
+//         console.log("tax rate is 10%");
+//     },
+//   };
 
-    const drawGame= ()=>{
-        console.log("game was draw");
-    
-};
-const showWinner= (userWin)=>{
-    if (userWin){
-        console.log("you win");
-    }else{
-        console.log("you loose");
+//   const karanArjun = {
+// salary:50000,
+// calcTax(){
+//     console.log("tax rate is 20%")
+// }
+//   };
+//   karanArjun.__proto__ = employee;
+
+//   const karanArjun2 = {
+// salary:50000,
+//   };
+//    karanArjun2.__proto__ = employee;
+
+//   const karanArjun3 = {
+// salary:50000,
+//   };
+//    karanArjun3.__proto__ = employee;
+class toyotaCar{
+    start(){
+console.log("start");
+    }
+    stop(){
+        console.log(stop);
+    }
+    setBrand(brand){
+        this.brand=brand;
     }
 }
-const playGame=(userChoice)=>{
-    console.log("userChoice=", userChoice);
-const compChoice=genCompChoice();
-console.log("comp choice=", compChoice)
-if (userChoice===compChoice){
-    //draw game
-    drawGame();
-}
-else{
-    let userWin=true;
-    if(userChoice==="rock"){
-        compChoice==="paper"?false:true;}
-        else if (userChoice==="paper"){
-            compChoice==="scissors"?false:true;}
-            else{
-                compChoice==="rock"?false:true;
-            }
-            showWinner(userWin);
-        }
-};
-
-choices.forEach((choice) =>{
-    choice.addEventListener("click",()=>{
-        const userChoice=choice.getAttribute("id")
-         playGame(userChoice);
-
-    });
-});
-
-
-
+let fortuner= new toyotaCar();
+fortuner.setBrand("fortuner");
+let lexus= new toyotaCar();
+lexus.setBrandBrand("lexus");

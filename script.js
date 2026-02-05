@@ -675,18 +675,39 @@
 // salary:50000,
 //   };
 //    karanArjun3.__proto__ = employee;
-class toyotaCar{
-    start(){
-console.log("start");
+// class toyotaCar{
+//     start(){
+// console.log("start");
+//     }
+//     stop(){
+//         cons ole.log(stop);
+//     }
+//     setBrand(brand){
+//         this.brand=brand;
+//     }
+// }
+// let fortuner= new toyotaCar();
+// fortuner.setBrand("fortuner");
+// let lexus= new toyotaCar();
+// lexus.setBrandBrand("lexus");
+class person {
+    constructor(){
+        this.species="homo-sepians";
     }
-    stop(){
-        console.log(stop);
+    eat(){
+        console.log("eat");
     }
-    setBrand(brand){
-        this.brand=brand;
+    sleep(){
+        console.log ("sleep");
+    }
+    work(){
+        console.log("do nothing")
     }
 }
-let fortuner= new toyotaCar();
-fortuner.setBrand("fortuner");
-let lexus= new toyotaCar();
-lexus.setBrandBrand("lexus");
+class engineer extends person {
+    work(){
+        console.log ("solve problems, build something");
+    }
+}
+
+let iramObj=new engineer;

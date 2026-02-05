@@ -690,24 +690,50 @@
 // fortuner.setBrand("fortuner");
 // let lexus= new toyotaCar();
 // lexus.setBrandBrand("lexus");
-class person {
-    constructor(){
-        this.species="homo-sepians";
-    }
-    eat(){
-        console.log("eat");
-    }
-    sleep(){
-        console.log ("sleep");
-    }
-    work(){
-        console.log("do nothing")
-    }
-}
-class engineer extends person {
-    work(){
-        console.log ("solve problems, build something");
-    }
-}
+// class person {
+//     constructor(){
+//         console.log("enter parent constructor");
+//         this.species="homo-sepians";
+//     }
+//     eat(){
+//         console.log("eat");
+//     }
 
-let iramObj=new engineer;
+// }
+// class engineer extends person {
+//     constructor(branch){
+//         console.log("enter child constructor");
+//         super(); // to invoke parent class constructor
+//         this.branch= branch;
+//         console.log("exit  child constructor");
+//     }
+//     work(){
+//         console.log ("solve problems, build something");
+//     }
+// }
+
+// let engObj=new engineer("chemical engg");
+let data= "secret information";
+class user {
+    constructor(name,email){
+this.name= name;
+this.email= email;
+    }
+    viewData(){
+        console.log("website data=", data)
+    }
+}
+class admin extends user {
+    constructor(name,email){
+        super(name,email);
+
+    }
+    editData(){
+        data= "some new value";
+    }
+    }
+
+let student1= new user("iramnaz", "iramnaz948@gmail.com");
+let student2= new user("amaan","amaanansari@gmail.com");
+let teacher1= new user("Dean","dean@gmail.com");
+let admin1= new admin("admin","admin@gmail.com")

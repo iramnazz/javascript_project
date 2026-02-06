@@ -713,27 +713,74 @@
 // }
 
 // let engObj=new engineer("chemical engg");
-let data= "secret information";
-class user {
-    constructor(name,email){
-this.name= name;
-this.email= email;
-    }
-    viewData(){
-        console.log("website data=", data)
-    }
+// let data= "secret information";
+// class user {
+//     constructor(name,email){
+// this.name= name;
+// this.email= email;
+//     }
+//     viewData(){
+//         console.log("website data=", data)
+//     }
+// }
+// class admin extends user {
+//     constructor(name,email){
+//         super(name,email); 
+
+//     }
+//     editData(){
+//         data= "some new value";
+//     }
+//     }
+
+// let student1= new user("iramnaz", "iramnaz948@gmail.com");
+// let student2= new user("amaan","amaanansari@gmail.com");
+// let teacher1= new user("Dean","dean@gmail.com");
+// let admin1= new admin("admin","admin@gmail.com")
+// function hello(){
+//     console.log("hello");
+// }
+// setTimeout(hello,2000) // timeout of 2 sec
+// setTimeout(()=>{
+//     console.log("good morning");
+// },3000); 
+// console.log("one");
+// console.log("two"); 
+
+// function sum (a,b){
+//     console.log(a+b);
+// }
+function calculator(a,b, sumCallback){
+    sumCallback(a,b);
 }
-class admin extends user {
-    constructor(name,email){
-        super(name,email);
-
-    }
-    editData(){
-        data= "some new value";
-    }
-    }
-
-let student1= new user("iramnaz", "iramnaz948@gmail.com");
-let student2= new user("amaan","amaanansari@gmail.com");
-let teacher1= new user("Dean","dean@gmail.com");
-let admin1= new admin("admin","admin@gmail.com")
+calculator (1,2,sum); 
+function getData(dataId,getNextData){
+    setTimeout(()=>{
+console.log("data",dataId);
+if (getNextData){
+    getNextData();
+}
+    }, 2000);
+    
+}
+//callback hell
+getData(1,()=>{
+getData(2,()=>{
+    getData(3);
+});
+});
+let promise = new Promise((resolve,reject)=>{
+console.log("iam a promise");
+// reject("some error");
+// });
+function getData(getData,getNextData){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+     console.log("data", getData);
+     resolve("success");
+     if (getNextData){
+        getNextData();
+     }
+        }, 5000);
+    })
+}

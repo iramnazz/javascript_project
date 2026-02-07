@@ -750,37 +750,141 @@
 // function sum (a,b){
 //     console.log(a+b);
 // }
-function calculator(a,b, sumCallback){
-    sumCallback(a,b);
-}
-calculator (1,2,sum); 
-function getData(dataId,getNextData){
-    setTimeout(()=>{
-console.log("data",dataId);
-if (getNextData){
-    getNextData();
-}
-    }, 2000);
+// function calculator(a,b, sumCallback){
+//     sumCallback(a,b);
+// }
+// calculator (1,2,sum); 
+// function getData(dataId,getNextData){
+//     setTimeout(()=>{
+// console.log("data",dataId);
+// if (getNextData){
+//     getNextData();
+// }
+//     }, 2000);
     
-}
-//callback hell
-getData(1,()=>{
-getData(2,()=>{
-    getData(3);
-});
-});
-let promise = new Promise((resolve,reject)=>{
-console.log("iam a promise");
-// reject("some error");
+// }
+// //callback hell
+// getData(1,()=>{ 
+// getData(2,()=>{
+//     getData(3);
 // });
-function getData(getData,getNextData){
-    return new Promise((resolve,reject)=>{
-        setTimeout(()=>{
-     console.log("data", getData);
-     resolve("success");
-     if (getNextData){
-        getNextData();
-     }
-        }, 5000);
-    })
+// });
+// let promise = new Promise((resolve,reject)=>{
+// console.log("iam a promise");
+// // reject("some error");
+// // });
+// function getData(getData,getNextData){
+//     return new Promise((resolve,reject)=>{
+//         setTimeout(()=>{
+//      console.log("data", getData);
+//      resolve("success");
+//      if (getNextData){
+//         getNextData();
+//      }
+//         }, 5000);
+//     })
+// }
+// function add (a,b){
+//     return a+b;
+// }
+// let result= add(5,3);
+// console.log (result);
+
+//  function test (a,b){
+//     console.log(a+b);
+//     return a+b;
+    
+//  }
+//  let result=test (2,3);
+//  console.log(result); 
+//  function informCustomer(){
+//     console.log("your parcel has been delievered");
+//  }
+//  function delieveredParcel(){
+//     console.log("parcel is on the way");
+//     callback();
+//  }
+//  delieveredParcel(informCustomer);
+
+//  function announceResult(){
+//     console.log("result announced");
+//  }
+//  function checkExam(callback){
+//     console.log ("check the exam copies");
+//      callback();
+//  }
+ checkExam(announceResult);
+function asynFunc1(){
+  return new Promise((resolve,reject)=>{
+setTimeout(()=>{
+console.log("some data1")
+resolve("success");
+},4000);
+  })  ; 
 }
+function asynFunc2(){
+  return new Promise((resolve,reject)=>{
+setTimeout(()=>{
+console.log("some data2")
+resolve("success");
+},4000);
+  })  ;
+}
+console.log("fetching data1");
+let p1= asynFunc1();
+p1.then((res)=>{
+    console.log(res);
+});
+console.log("fetching data1......");
+asynFunc1().then((res)=>{
+    console.log("fetching data2......");
+    asynFunc2().then((res)=>{});
+});
+let promise= new Promise((resolve,reject)=>{
+    if(consition){
+        resolve("success message");
+    }
+    else{
+        reject("error message");
+    }
+});
+promise
+.then((result)=>{
+    console.log(result);
+})
+.catch((error)=>{
+    console.log(error);
+});
+
+let pizzaOrder= new Promise((resolve,reject)=>{
+    let pizzaReady=false;
+    if(pizzaReady){
+        console.log("order successful");
+    }
+    else{
+        console.log("order failed");
+    }
+});
+pizzaOrder
+.then((res)=>{
+    console.log(message);
+})
+.catch((err)=>{
+    console.log(message);
+});
+let parcelTrack= new Promise((resolve,reject)=>{
+    let parcelDelievered= false;
+    if(parcelDelievered){
+        console.log("order succesful");
+    }
+    else{
+        console.log("order cancelled");
+    }
+});
+parcelTrack
+.then((res)=>{
+    
+})
+.catch((err)=>{
+   
+})

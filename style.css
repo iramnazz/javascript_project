@@ -25,7 +25,7 @@ html,body{
     border: 2px solid black;
     border-radius:5px;
 } */
- /* h1{
+/* h1{
     background-color: brown;
     padding:2px;
     margin:3px;
@@ -51,7 +51,7 @@ background-color: yellow;
 .heading{
     background-color: pink;
 } */
- /* #box{
+/* #box{
 width: 100px;
 height: 100px;
 border:2px solid black;
@@ -59,87 +59,75 @@ text-align: center;
 margin:5px;
 background-color: yellowgreen;
  } */
-  /* / */
-  /* div{
+/* / */
+/* div{
     height:100px;
     width:100px;
     background-color: dodgerblue;
     color:white;
     border: 1px solid black;
   } */
-   body{
-    margin: 0;
-    padding: 0;
-    text-align: center;
-   }
-h1{
-    background-color: #081b31;
-    color: #fff;
-    height: 5rem;
-    line-height: 5rem;  
+
+body {
+  background-color: rgb(0, 0, 8);
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
 }
-.choice{
-    height:165px;
-    width:165px;
-    border-radius: 50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-.choice:hover{
-    cursor: pointer;
-    background-color: #081b31;
-}
-img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-     border-radius: 50%;                                      
-}
-.choices{
-    display:flex;
-    justify-content:center;
+nav{
+   display:flex;
+    justify-content: space-around;
     align-items: center;
-    gap: 3rem;
-    margin-top: 5rem;
+    height:90px;
+    background-color: rgb(18, 18, 62);
+}
+nav ul{
+    display:flex;
+    justify-content: center;
     
 }
-.score-board{
+nav ul li{
+    list-style: none;
+    margin:0 23px;
+
+}
+nav ul li a{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+nav ul li a:hover{
+    color:rgb(226, 226, 236);
+    font-size: 1.04rem;
+}
+
+.left{
+    font-size: 1.5rem;
+}
+.firstSection{
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2rem;
-    gap:5rem;
+    justify-content: space-around;
+    margin: 80px 0;   
 }
-#user-score,#comp-score{
-    font-size: 4rem;
+.firstSection > div{
+    width:30%;
+       
 }
-.msg-container{
-    margin-top: 5rem;
+.leftSection{
+    font-size: 3rem;
+    margin: 70px 0;
+
+    
+
+  
 }
-#msg{
-    background-color:#081b31 ;
-    color:#fff;
-    font-size: 2rem;
-    display: inline;
-    padding: 1rem;
-    border-radius: 1rem;
+.rightSection img{
+
+    width:80%;
+    margin:50px 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.purple{
+    color: rgb(134, 76, 189);
+}
+#element{
+    color: blueviolet
+}

@@ -73,35 +73,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rock Paper Scissors Game</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Iram-Developer Portfolio</title>
+  <link href="style.css" rel="stylesheet" type="text/css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+
+  </style>
 </head>
 <body>
-<h1>Rock Paper Scissors</h1>
-<div class="choices">
-  <div class="choice" id="rock">
-    <img src="./images/Rock.jpeg">
-</div>
-<div class="choice" id="paper">
-    <img src="./images/Paper.jpeg">
-</div>
-<div class="choice" id="scissor">
-    <img src="./images/Scissor.jpeg">
-</div>
-</div>
-<div class="score-board">
-<div class="score">
-  <p id="user-score">0</p>
-  <p>You</p>
-</div>
-<div class="score">
-  <p id="comp-score">0</p>
-  <p>Comp</p>
-</div>
-</div>
-<div class="msg-container">
-  <p id="msg">Play your move</p>
-</div>
-  <script src="script.js"></script> 
+<header>
+  <nav>
+    <div class="left">Iram's Portfolio</div>
+    <div class="right">
+      <ul>
+       <li><a href="/">Home</a></li>
+        <li><a href="/">About</a></li>
+      <li><a href="/">Services</a></li>
+       <li><a href="/">Projects</a></li>
+        <li><a href="/">Contact me</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+  <main>
+    <section class="firstSection">
+    <div class="leftSection">Hi, My name is <span class="purple">Iram</span> 
+    <div>Iam a Web Passionate</div>
+    <div>web developer</div>
+    <span id="element"></span>
+    </div>
+    <div class="rightSection">
+      <img src="image.png" alt="">
+    </div>
+    </section>
+  </main>
+  
+  <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['<i>Web Developer</i>.', '&amp; web designer.'],
+      typeSpeed: 50,
+    });
+  </script>
 </body>
 </html>

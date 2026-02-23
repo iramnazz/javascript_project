@@ -106,7 +106,8 @@ nav ul li a:hover{
 .firstSection{
     display: flex;
     justify-content: space-around;
-    margin: 80px 0;   
+    align-items: center;
+    margin: 140px 0;   
 }
 .firstSection > div{
     width:30%;
@@ -128,6 +129,37 @@ nav ul li a:hover{
 .purple{
     color: rgb(134, 76, 189);
 }
-#element{
+#element{s
     color: blueviolet
+}
+.secondSection{
+    max-width: 80vw;
+    margin: auto;
+    height: 80vh;
+}
+.secondSection .box{
+    background: white;
+    width: 80vw;
+    height: 2px;
+    margin: 56px 0;
+    display: flex;
+}
+.secondSection .vertical{
+    height: 93px;
+    width: 1px;
+    background: white;
+    margin: 0 100px;
+}
+.secondSection h1{ 
+    font-size: 1.9rem;
+}
+main hr{
+    border: 0;
+    background-color: #9c97f1;
+    height: 1.2px;
+    margin: 40px 84px;
+    
+}
+.textGrey{
+    color: grey;
 }
